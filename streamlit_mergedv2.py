@@ -165,7 +165,7 @@ if page == "Business problem":
         st.markdown(f"""
         <div style="background-color:#FFFFFF; padding:20px; border-radius:10px; text-align:center">
             <h3 style="margin-bottom:5px;">Features</h3>
-            <h1 style="font-size:48px; color:#000000;">{tmp.shape[1]-2}</h1>
+            <h1 style="font-size:48px; color:#000000;">{tmp.shape[1]-3}</h1>
         </div>
         """, unsafe_allow_html=True)
     with col4:
@@ -179,14 +179,14 @@ if page == "Business problem":
         st.markdown(f"""
         <div style="background-color:#FFFFFF; padding:20px; border-radius:10px; text-align:center">
             <h3 style="margin-bottom:5px;">Num. Features</h3>
-            <h1 style="font-size:48px; color:#000000;">{len(tmp.select_dtypes(['float64', 'int64']).columns)}</h1>
+            <h1 style="font-size:48px; color:#000000;">{len(tmp.select_dtypes(['float64', 'int64']).columns)-1}</h1>
         </div>
         """, unsafe_allow_html=True)
     with col6:
         st.markdown(f"""
         <div style="background-color:#FFFFFF; padding:20px; border-radius:10px; text-align:center">
             <h3 style="margin-bottom:5px;">Cat. Features</h3>
-            <h1 style="font-size:48px; color:#000000;">{len(tmp.select_dtypes(['object']).columns)}</h1>
+            <h1 style="font-size:48px; color:#000000;">{len(tmp.select_dtypes(['object']).columns)-1}</h1>
         </div>
         """, unsafe_allow_html=True)
 
